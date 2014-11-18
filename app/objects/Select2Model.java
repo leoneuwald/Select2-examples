@@ -1,5 +1,5 @@
 package objects;
 
-public abstract class Select2AbstractObject {
+public interface Select2Model {
 	public abstract String getId();
 }

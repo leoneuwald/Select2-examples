@@ -3,25 +3,24 @@ package controllers;
 import java.io.Serializable;
 import java.util.List;
 
-import objects.Select2AbstractObject;
+import objects.Select2Model;
 
 public class Select2ResultList implements Serializable {
 	private static final long serialVersionUID = 1L;
 
-	private List<? extends Select2AbstractObject> result;
+	private List<Select2Model> result;
 	private Boolean hasMore;
 
-	public Select2ResultList(List<? extends Select2AbstractObject> result,
-			Boolean hasMore) {
+	public Select2ResultList(List<Select2Model> result, Boolean hasMore) {
 		this.result = result;
 		this.hasMore = hasMore;
 	}
 
-	public List<?> getResult() {
+	public List<Select2Model> getResult() {
 		return result;
 	}
 
-	public void setResult(List<? extends Select2AbstractObject> result) {
+	public void setResult(List<Select2Model> result) {
 		this.result = result;
 	}
 
