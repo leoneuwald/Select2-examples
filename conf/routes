@@ -4,7 +4,7 @@
 
 # Home page
 GET     /                           controllers.Application.index()
-GET     /select2/jobs               controllers.Select2Result.allJobs(q: String, page_limit: Integer)
+GET     /select2/jobs               controllers.Select2Result.allJobs(q: String, page_limit: Integer, page: Integer)
 
 
 # Map static resources from the /public folder to the /assets URL path

@@ -3,24 +3,22 @@ package controllers;
 import java.io.Serializable;
 import java.util.List;
 
-import objects.Select2Model;
-
 public class Select2ResultList implements Serializable {
 	private static final long serialVersionUID = 1L;
 
-	private List<Select2Model> result;
+	private List<?> result;
 	private Boolean hasMore;
 
-	public Select2ResultList(List<Select2Model> result, Boolean hasMore) {
+	public Select2ResultList(List<?> result, Boolean hasMore) {
 		this.result = result;
 		this.hasMore = hasMore;
 	}
 
-	public List<Select2Model> getResult() {
+	public List<?> getResult() {
 		return result;
 	}
 
-	public void setResult(List<Select2Model> result) {
+	public void setResult(List<?> result) {
 		this.result = result;
 	}
 
