@@ -98,7 +98,7 @@ $(document).ready(function() {
 			</p>
 			<p>
 				<a class="btn btn-primary btn-lg" href="http://ivaynberg.github.io/select2/">Select2</a>
-				<a class="btn btn-info btn-social btn-lg btn-github" href="http://ivaynberg.github.io/select2/"><i class="fa fa-github"></i>Select2-examples</a>
+				<a class="btn btn-info btn-social btn-lg btn-github" href="https://github.com/leoneuwald/Select2-examples"><i class="fa fa-github"></i>Select2-examples</a>
 			</p>
 		</div>
 		<div class="page-header">
@@ -111,10 +111,28 @@ $(document).ready(function() {
 					</div>
 					<div class="col-md-8">
 						<pre class="prettyprint linenums">
- Many
- lines
- of
- code</pre>
+$("#e2").select2({
+    placeholder: "Search for a job",
+    minimumInputLength: 1,
+    ajax: {
+        url: "../select2/jobs",
+        dataType: 'json',
+        data: function (term, page) {
+            return {
+                q: term,
+                page_limit: 10,
+                page: page
+            };
+        },
+        results: function (data, page) {
+            return {results: data.result, more: data.hasMore};
+        }
+    },
+    formatResult: movieFormatResult,
+    formatSelection: movieFormatSelection,
+    dropdownCssClass: "bigdrop",
+    escapeMarkup: function (m) { return m; }
+});</pre>
 					</div>
 				</div>
 			</section>
