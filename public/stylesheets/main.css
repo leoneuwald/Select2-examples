@@ -9,10 +9,10 @@ body {
 	margin-bottom: 20px;
 }
 
-.theme-showcase>p>.btn {
+.theme>p>.btn {
 	margin: 5px 0;
 }
 
-.theme-showcase .navbar .container {
+.theme .navbar .container {
 	width: auto;
 }

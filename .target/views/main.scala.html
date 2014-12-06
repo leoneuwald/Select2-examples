@@ -18,7 +18,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/bootstrap/3.3.0/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
 <script src="https://cdn.jsdelivr.net/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-
+<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?autoload=true&amp;skin=sons-of-obsidian&amp;lang=css" defer="defer"></script>
 </head>
 <script type="text/javascript">
 
@@ -71,19 +71,16 @@ $(document).ready(function() {
 			</div>
 			<div id="navbar" class="navbar-collapse collapse">
 				<ul class="nav navbar-nav">
-					<li class="active"><a href="#">Home</a></li>
-					<li><a href="#about">About</a></li>
+					<li><a href="#">Home</a></li>
 					<li><a href="#contact">Contact</a></li>
 					<li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Examples
 							<span class="caret"></span>
 						</a>
 						<ul class="dropdown-menu" role="menu">
-							<li><a href="#">Action</a></li>
+							<li class="page-scroll"><a href="#remote_infinity_data">Remote infinity data</a></li>
 							<li><a href="#">Another action</a></li>
 							<li><a href="#">Something else here</a></li>
-							<li class="divider"></li>
-							<li class="dropdown-header">Nav header</li>
 							<li><a href="#">Separated link</a></li>
 							<li><a href="#">One more separated link</a></li>
 						</ul>
@@ -93,22 +90,35 @@ $(document).ready(function() {
 		</div>
 	</nav>
 
-	<div class="container theme-showcase" role="main">
+	<div class="container theme" role="main">
 		<div class="jumbotron">
 			<h1>Select2-examples</h1>
 			<p>
-				This is a website with some examples of use Select2. The main idea of this website is show examples more easiest and completes than official website. You can check those examples and the official examples in the links below.
+				This is a website with some examples of use Select2. You can check those examples and the official examples in the links below.
 			</p>
 			<p>
-				<a class="btn btn-primary btn-social btn-lg btn-github" onclick="_gaq.push(['_trackEvent', 'btn-social', 'click', 'btn-lg']);"><i class="fa fa-github"></i>Sign in with GitHub</a>
-			</p>
-			<p>
-				<a href="#" class="btn btn-primary btn-lg" role="button">Learn
-					more &raquo;</a>
+				<a class="btn btn-primary btn-lg" href="http://ivaynberg.github.io/select2/">Select2</a>
+				<a class="btn btn-info btn-social btn-lg btn-github" href="http://ivaynberg.github.io/select2/"><i class="fa fa-github"></i>Select2-examples</a>
 			</p>
 		</div>
+		<div class="page-header">
+			<section id="remote_infinity_data">
+				<h3>Remote infinity data</h3>
+				<div class="row">
+					<div class="col-md-4">
+						<p>This are a example of use of Select2 loading a remote data</p>
+						<input id="e2"></input>
+					</div>
+					<div class="col-md-8">
+						<pre class="prettyprint linenums">
+ Many
+ lines
+ of
+ code</pre>
+					</div>
+				</div>
+			</section>
+		</div>
 	</div>
-
-	<input id="e2"></input>
 </body>
 </html>
