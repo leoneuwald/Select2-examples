@@ -16,7 +16,7 @@ public class Global extends GlobalSettings {
 		new JobModel("Name of Job08", "description of the Job08").save();
 		new JobModel("Name of Job09", "description of the Job09").save();
 		new JobModel("Name of Job10", "description of the Job10").save();
-		new JobModel("Name of Job11", "description of the Job11").save();
+		new JobModel("Name of joboi", "description of the joboi").save();
 		new JobModel("Name of Job12", "description of the Job12").save();
 		new JobModel("Name of Job13", "description of the Job13").save();
 		new JobModel("Name of Job14", "description of the Job14").save();

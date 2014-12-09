@@ -22,14 +22,14 @@
 </head>
 <script type="text/javascript">
 
-function movieFormatResult(result) {
+function jobFormatResult(result) {
     var markup = "<table><tr>";
     markup += "<td>" + result.name + " - " + result.description + "</td>";
     markup += "</tr></table>";
     return markup;
 }
 
-function movieFormatSelection(result) {
+function jobFormatSelection(result) {
     return result.name;
 }
 $(document).ready(function() { 
@@ -39,6 +39,7 @@ $(document).ready(function() {
 	    ajax: {
 	        url: "../select2/jobs",
 	        dataType: 'json',
+	        quietMillis: 350,
 	        data: function (term, page) {
 	            return {
 	                q: term,
@@ -50,8 +51,8 @@ $(document).ready(function() {
 	            return {results: data.result, more: data.hasMore};
 	        }
 	    },
-	    formatResult: movieFormatResult,
-	    formatSelection: movieFormatSelection,
+	    formatResult: jobFormatResult,
+	    formatSelection: jobFormatSelection,
 	    dropdownCssClass: "bigdrop",
 	    escapeMarkup: function (m) { return m; }
 	});
@@ -106,17 +107,26 @@ $(document).ready(function() {
 				<h3>Remote infinity data</h3>
 				<div class="row">
 					<div class="col-md-4">
-						<p>This are a example of use of Select2 loading a remote data</p>
-						<input id="e2"></input>
+						<p>This are a example of use of Select2 loading a remote data with infinity scroll.</p>
+						<input id="e2" style="width: 100%"></input>
+						
+						<h4>Some keywords of the example:</h4>
+						<p><mark><em>minimumInputLength: 2</em></mark> Should have at least 2 characters to start to find.</p>
+						<p><mark><em>quietMillis: 350</em></mark> Will wait 350 milliseconds after every key press to go for server do the search.</p>
+						<p><mark><em>more: data.hasMore</em></mark> The <em>data.hasMore</em> needs to return true or false for select2. If true, when you scroll the results, he will call the server again, otherwise finish the find.</p>
+						<p><mark><em>formatResult: jobFormatResult</em></mark> Call javascript function <em>jobFormatResult</em> that format the results in the list.</p>
+						<p><mark><em>formatSelection: jobFormatSelection</em></mark> Call javascript function <em>jobFormatSelection</em> that format the selected result.</p>
+						
 					</div>
 					<div class="col-md-8">
 						<pre class="prettyprint linenums">
 $("#e2").select2({
     placeholder: "Search for a job",
-    minimumInputLength: 1,
+    minimumInputLength: 2,
     ajax: {
         url: "../select2/jobs",
         dataType: 'json',
+        quietMillis: 350,
         data: function (term, page) {
             return {
                 q: term,
@@ -128,8 +138,8 @@ $("#e2").select2({
             return {results: data.result, more: data.hasMore};
         }
     },
-    formatResult: movieFormatResult,
-    formatSelection: movieFormatSelection,
+    formatResult: jobFormatResult,
+    formatSelection: jobFormatSelection,
     dropdownCssClass: "bigdrop",
     escapeMarkup: function (m) { return m; }
 });</pre>
