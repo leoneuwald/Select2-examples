@@ -1,1 +1,1 @@
-web: target/universal/stage/bin/select2Example -Dhttp.port=${PORT} -DapplyEvolutions.default=false -Ddb.default.driver=org.postgresql.Driver -Ddb.default.url=${DATABASE_URL}
+web: target/universal/stage/bin/select2example -Dhttp.port=${PORT} -DapplyEvolutions.default=false -Ddb.default.driver=org.postgresql.Driver -Ddb.default.url=${DATABASE_URL}
